@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive lab exploring quantum computing and the future of encryption.">
+  <title>Quantum Cybersecurity · Quantum Lab</title>
+  <link rel="stylesheet" href="/static/style.css"><script src="/static/script.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a href="#overview" class="brand"><span class="brand-mark">✧</span><span>QUANTUM<span class="brand-light">LAB</span><small>SECURITY RESEARCH</small></span></a>
+    <div class="side-label">WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="#overview"><span>◈</span> Overview <i></i></a>
+      <a class="nav-link" href="#simulator"><span>⌘</span> Shor's Simulator</a>
+      <a class="nav-link" href="#comparison"><span>▧</span> RSA vs. Quantum</a>
+      <a class="nav-link" href="#pqc"><span>⬡</span> Post-Quantum Crypto</a>
+      <a class="nav-link" href="#history"><span>◷</span> Simulation History</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="side-icon">✧</div><div><strong>Exploring the future</strong><p>One qubit at a time.</p></div></div>
+    <div class="side-foot"><span class="status-dot"></span> <span id="server-status">Checking system</span><span class="version">v1.0</span></div>
+  </aside>
+  <main>
+    <header class="topbar"><div class="breadcrumbs">WORKSPACE <span>/</span> <b>OVERVIEW</b></div><div class="top-right"><span class="top-status"><span class="status-dot"></span> EDUCATIONAL ENVIRONMENT</span><a href="#about" class="help" aria-label="About this lab">?</a><div class="avatar">QL</div></div></header>
+    <div class="content" id="overview">
+      <div class="page-heading"><div><div class="eyebrow"><span class="tiny-cross">✦</span> THE QUANTUM SECURITY PROJECT</div><h1>Explore the quantum frontier<span>.</span></h1><p>Understand how quantum computing is reshaping the future of encryption.</p></div><div class="heading-badge"><span class="status-dot"></span> INTERACTIVE LEARNING LAB</div></div>
+      <section class="hero" id="about">
+        <div class="hero-copy"><div class="pill"><span>✧</span> THE FUTURE OF CRYPTOGRAPHY</div><h2>Encryption is evolving.<br><em>So should we.</em></h2><p>Quantum computers could break the encryption that protects our digital world. Explore the algorithms behind the threat—and the ideas building a safer future.</p><div class="hero-actions"><a href="#simulator" class="button primary">Launch simulator <span>↗</span></a><a href="#pqc" class="button secondary">Explore post-quantum <span>→</span></a></div><div class="hero-note"><span>◉</span> No quantum computer required. Just curiosity.</div></div>
+        <div class="hero-art" aria-hidden="true"><div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div><div class="orbit-dot dot-three"></div><div class="core"><div class="core-inner">✧</div></div><span class="art-label label-one">|ψ⟩</span><span class="art-label label-two">0101</span><span class="art-label label-three">q₀</span><div class="art-caption">QUANTUM STATE <b>●</b> VISUALIZED</div></div>
+      </section>
+      <div class="section-heading"><div><div class="eyebrow">YOUR LEARNING WORKSPACE</div><h2>Start exploring <span>↗</span></h2><p>From foundational concepts to hands-on simulations.</p></div><span class="section-counter">01 — 04</span></div>
+      <div class="workspace-grid">
+        <section class="panel simulator-card" id="simulator"><div class="panel-top"><div class="icon-box cyan">⌘</div><span class="tag cyan-tag">INTERACTIVE SIMULATION</span><span class="panel-index">01 / 04</span></div><h3>Shor's Algorithm Simulator</h3><p>See how a quantum computer could factor the large numbers that keep RSA encryption secure.</p><div class="divider"></div><div class="sim-body"><div class="sim-controls"><label for="number">NUMBER TO FACTOR <span>ⓘ</span></label><div class="input-row"><input id="number" type="number" min="2" max="999" value="15"><button id="run" class="button primary">Run simulation <span>→</span></button></div><p class="hint">Try a small number between 2 and 999.</p><div class="steps-label">THE QUANTUM PROCESS <span>4 STEPS</span></div><div class="mini-steps"><span><b>01</b> Superposition</span><span><b>02</b> Modular exponentiation</span><span><b>03</b> Quantum Fourier transform</span><span><b>04</b> Measurement</span></div></div><div class="circuit-wrap"><div class="circuit-title"><span>QUANTUM CIRCUIT</span><span class="live-dot">● SIMPLIFIED</span></div><svg class="circuit" viewBox="0 0 390 165" role="img" aria-label="Illustrative circuit: Hadamard gates, modular exponentiation, quantum Fourier transform and measurement"><g class="wire"><path d="M36 35 H370 M36 78 H370 M36 121 H370"/></g><g class="wire-label"><text x="4" y="39">|0⟩</text><text x="4" y="82">|0⟩</text><text x="4" y="125">|1⟩</text></g><g class="gate"><rect x="62" y="19" width="31" height="32" rx="4"/><rect x="62" y="62" width="31" height="32" rx="4"/><text x="72" y="40">H</text><text x="72" y="83">H</text></g><g class="gate purple"><rect x="130" y="19" width="70" height="118" rx="5"/><text x="142" y="75">U<tspan baseline-shift="sub" font-size="8">f</tspan></text><text x="140" y="93" font-size="8">aˣ mod N</text></g><g class="gate blue"><rect x="237" y="19" width="57" height="75" rx="5"/><text x="244" y="61">QFT</text></g><g class="gate"><rect x="330" y="19" width="31" height="32" rx="4"/><rect x="330" y="62" width="31" height="32" rx="4"/><text x="337" y="41">◠</text><text x="337" y="84">◠</text></g><g class="circuit-bottom"><text x="60" y="158">SUPERPOSITION</text><text x="140" y="158">ORACLE</text><text x="237" y="158">QFT</text><text x="322" y="158">MEASURE</text></g></svg><div class="circuit-footer"><span><i></i> Conceptual circuit</span><span>NOT A QUBIT SIMULATION</span></div></div></div><div id="result" class="result" aria-live="polite"><span class="result-icon">✧</span><span>Ready to explore? Run a simulation to see the results.</span></div><div id="step-log" class="step-log"></div></section>
+        <div class="right-column"><section class="panel feature-card" id="comparison"><div class="panel-top"><div class="icon-box violet">▧</div><span class="tag violet-tag">THE QUANTUM THREAT</span><span class="panel-index">02 / 04</span></div><h3>RSA vs. Quantum</h3><p>Compare how classical encryption works—and how Shor's algorithm challenges it.</p><div class="comparison-visual"><div><span class="compare-icon">⌑</span><small>CLASSICAL RSA</small><strong>p × q = N</strong><span>Easy to multiply</span></div><div class="versus">VS</div><div><span class="compare-icon quantum">✧</span><small>SHOR'S ALGORITHM</small><strong>N → p, q</strong><span>Period-finding</span></div></div><div class="rsa-demo"><label for="message">TRY TOY RSA</label><div class="input-row"><input id="message" value="Hello quantum" maxlength="128" aria-label="Message to encrypt"><button id="encrypt" class="small-button">Encrypt →</button></div><div id="rsa-result" class="demo-output" aria-live="polite"></div><button id="decrypt" class="text-button hidden">Decrypt with private key →</button></div></section>
+        <section class="panel feature-card pqc-card" id="pqc"><div class="panel-top"><div class="icon-box green">⬡</div><span class="tag green-tag">THE NEXT FRONTIER</span><span class="panel-index">03 / 04</span></div><h3>Post-Quantum Cryptography</h3><p>Meet the new generation of algorithms designed to stand up to quantum attacks.</p><div class="pqc-types"><div><span>◈</span><strong>Lattice-based</strong><small>Hard problems in high dimensions</small></div><div><span>⌗</span><strong>Hash-based</strong><small>Signatures built from hash functions</small></div></div><button id="exchange" class="link-action">Explore key exchange <span>↗</span></button><div id="exchange-result" class="demo-output" aria-live="polite"></div></section></div>
+      </div>
+      <section class="panel history-card" id="history"><div class="history-head"><div class="icon-box blue-icon">◷</div><div><div class="eyebrow">YOUR ACTIVITY</div><h3>Simulation history</h3><p>Your latest experiments, all in one place.</p></div><button id="refresh" class="refresh">↻ &nbsp; Refresh</button><span class="panel-index">04 / 04</span></div><div id="history-list" class="history-list" aria-live="polite"><div class="empty-history"><span>◷</span><div><strong>No simulations yet</strong><p>Run your first simulation to see it here.</p></div></div></div></section>
+      <footer><span>✧ &nbsp; QUANTUMLAB <i> / </i> EXPLORING THE IMPACT OF QUANTUM COMPUTING</span><span>BUILT FOR CURIOUS MINDS &nbsp; ✦</span></footer>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS simulations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    input_number INTEGER NOT NULL,
+    factors TEXT NOT NULL,
+    algorithm TEXT NOT NULL,
+    details TEXT NOT NULL
+);
