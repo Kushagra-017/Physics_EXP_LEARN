@@ -1,9 +1,10 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-where python >nul 2>&1
+if exist "%~dp0.python\python.exe" set "PATH=%~dp0.python;%PATH%"
+python -c "import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>&1
 if errorlevel 1 (
-  echo Python was not found. Install Python 3.10 or newer and add it to PATH.
+  echo Python 3.10 or newer was not found. Run setup-windows.bat first.
   pause
   exit /b 1
 )

@@ -6,7 +6,9 @@ An interactive, small-number teaching lab about the impact of quantum computing 
 
 ## Run on Windows
 
-Install Python 3.10+ with `python` on PATH. Double-click `start.bat`: it creates `.venv`, installs the dependencies, starts Waitress in a separate window on port 5000, and opens the browser. Close the server window to stop it. Initial setup requires internet access to PyPI.
+On a Windows 10/11 **64-bit x64** PC with no Python installed, download or copy the entire project folder to a writable location, then double-click **`setup-windows.bat`**. It downloads the official Python 3.12.10 installer from python.org, checks its Windows digital signature, and installs Python into the project's `.python` directory (not system-wide). It then runs `start.bat`, which creates `.venv`, installs the dependencies, starts Waitress on port 5000, and opens the browser. Initial setup needs an internet connection to python.org and PyPI, and Windows PowerShell. No administrator access should be necessary in a writable folder. If download, signature verification, or installation fails, the script displays an error instead of executing an unverified download.
+
+For subsequent runs, double-click `start.bat`; it automatically uses the local Python installation. Close the server window to stop it. If a compatible Python 3.10+ is already available on PATH, the setup script uses it instead. On non-x64 Windows, install a compatible Python 3.10+ manually from python.org and use `start.bat`. Keep `.python` and `.venv` with the project, or rerun setup if they are removed or the project is moved (virtual environments may need to be recreated after a move).
 
 ## Run on macOS / Linux
 
